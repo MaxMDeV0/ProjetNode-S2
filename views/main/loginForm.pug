@@ -1,0 +1,7 @@
+extends ../layout/layout
+
+block content
+    form(action='/login', method="post" class="row") 
+        input(type="text", placeholder="email", name="email", class="col-md-12 form-group")
+        input(type="text", placeholder="password", name="password", class="col-md-12 form-group")
+        input(type="submit", value="Log In", class="col-md-12 form-group")

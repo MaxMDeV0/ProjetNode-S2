@@ -1,0 +1,16 @@
+extends ../layout/layout
+
+block content
+    form(action='/signin', method="post" class="row") 
+        input(type="text", placeholder="firstname", name="firstname", class="col-md-12 form-group")
+        input(type="text", placeholder="lastname", name="lastname", class="col-md-12 form-group")
+        input(type="text", placeholder="email", name="email", class="col-md-12 form-group")
+        input(type="password", placeholder="password", name="password", class="col-md-12 form-group")
+        input(type="password", placeholder="confirmpassword", name="confirmpassword", class="col-md-12 form-group")
+        input(type="submit", value="Sign In", class="col-md-12 form-group")
+    
+    if typeof errors !== 'undefined' && errors !== null
+        if Object.keys(errors).length > 0
+            ul(class="errorMessage")
+                each error in errors
+                    li #{error}

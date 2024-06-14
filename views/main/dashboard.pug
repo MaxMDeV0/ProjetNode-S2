@@ -1,0 +1,10 @@
+extends ../layout/layout
+
+block content 
+    h1= "Welcome !"
+    ul 
+        each user in users 
+            li(class="col-md-6 form-control" style="margin-bottom: 15px")
+                div(class="col-md-12")= 'firstname : ' + user.firstname
+                div(class="col-md-12")= 'lastname : ' + user.lastname
+                div(class="col-md-12")= 'email : ' + user.email
